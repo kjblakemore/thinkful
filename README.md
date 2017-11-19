@@ -1,0 +1,1 @@
+This repository contains exercices for Thinkful's Data Science Courses.
