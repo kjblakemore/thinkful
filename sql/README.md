@@ -1,0 +1,1 @@
+This directory contains the SQL projects (unit 1, Lesson 2) from the Thinkful Data Science Bootcamp.
