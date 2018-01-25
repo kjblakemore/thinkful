@@ -1,0 +1,1 @@
+This directory contains projects from Unit 1 / Lesson 3 (Intermediate visualization) of the Data Science bootcamp.
