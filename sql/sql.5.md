@@ -23,7 +23,7 @@
   ```SQL
   SELECT 
     date,
-    AVG(CAST(LTRIM(price, '$') AS REAL)) avg_price
+    AVG(LTRIM(price, '$')) avg_price
   FROM
     calendar
   WHERE available = 't'  
