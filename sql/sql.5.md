@@ -26,6 +26,7 @@
     AVG(CAST(LTRIM(price, '$') AS REAL)) avg_price
   FROM
     calendar
+  WHERE available = 't'  
   GROUP BY 1
   ORDER BY avg_price
   ```
