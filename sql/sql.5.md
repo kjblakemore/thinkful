@@ -12,11 +12,11 @@
   ```SQL
   SELECT 
     neighbourhood,
-    AVG(availability_365) neighborhood_availability
-  FROM
-    listings
+    Count(id) as listing_count
+  FROM listings
+
   GROUP BY 1
-  ORDER BY neighborhood_availability
+  ORDER BY listing_count DESC
   ```
 
 3. What time of year is the cheapest time to go to your city? 
