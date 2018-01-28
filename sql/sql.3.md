@@ -1,30 +1,35 @@
 #### Aggregates and Groups (Project 3)
-1. The ID's and durations for all trips of duration greater than 500, ordered by duration.
+1. What was the hottest day in our data set? Where was that?
   ```SQL
-  SELECT
-    trip_id,
-    duration
-  FROM
-    trips
-  WHERE
-    duration > 500
-  ORDER BY duration
+  SELECT 
+    MAX(MaxTemperatureF),
+    ZIP,
+    Date
+  FROM weather
   ```
-2. Every column of the stations table for station id 84.
+2. How many trips started at each station?
   ```SQL
-  SELECT
-    station_id
-  FROM
-    stations
-  WHERE 
-    station_id == 84
+  SELECT 
+    COUNT(*) as trip_count,
+    start_station
+  FROM trips
+
+  GROUP BY start_station
   ```  
-3. The min temperatures of all the occurrences of rain in zip 94301.
+3. What's the shortest trip that happened?
   ```SQL
-  SELECT
-    MinTemperatureF
-  FROM
-    weather
-  WHERE
-    ZIP == 94301 AND PrecipitationIn > 0
+  SELECT 
+    trip_id,
+    MIN(duration) as minimum_duration
+  FROM trips
   ```  
+
+4. What is the average trip duration, by end station?
+  ```SQL
+  SELECT 
+    AVG(duration) as average_duration,
+    end_station
+  FROM trips
+  
+  GROUP BY end_station
+  ```
